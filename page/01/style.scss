@@ -1,0 +1,28 @@
+@import "../common.scss";
+
+.root {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > div {
+    @include text-center;
+  }
+}
+
+.header {
+  height: $headerHeight;
+  background-color: red;
+}
+
+.content {
+  flex: 1 1 auto;
+  height: 2000px; // 内容超出
+  background-color: green;
+}
+
+.footer {
+  height: $footerHeight;
+  background-color: blue;
+}

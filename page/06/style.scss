@@ -1,0 +1,51 @@
+@import "../common.scss";
+
+.root {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidenav {
+  width: $sidenavWidth;
+  background-color: yellow;
+
+  @include text-center();
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.header {
+  height: $headerHeight;
+  background-color: red;
+
+  @include text-center;
+}
+
+.container {
+  height: calc(100% - #{$headerHeight} - #{$footerHeight});
+  overflow-y: auto;
+
+  > div {
+    @include text-center;
+  }
+}
+
+.content {
+  min-height: 100%;
+  height: 2000px; // 内容超出
+  background-color: green;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - #{$sidenavWidth});
+  height: $footerHeight;
+  background-color: blue;
+
+  @include text-center;
+}

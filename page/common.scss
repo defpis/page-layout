@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+
+@mixin text-center {
+  font-size: 48px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+$sidenavWidth: 200px;
+$headerHeight: 100px;
+$footerHeight: 100px;

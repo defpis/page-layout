@@ -1,0 +1,40 @@
+@import "../common.scss";
+
+.root {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: yellow;
+
+  @include text-center();
+}
+
+.main {
+  flex: 1 1 auto;
+  overflow-y: auto;
+
+  > div {
+    @include text-center();
+  }
+}
+
+.header {
+  height: $headerHeight;
+  background-color: red;
+}
+
+.content {
+  min-height: calc(100% - #{$headerHeight} - #{$footerHeight});
+  height: 2000px; // 内容超出
+  background-color: green;
+}
+
+.footer {
+  height: $footerHeight;
+  background-color: blue;
+}
